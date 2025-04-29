@@ -1,6 +1,6 @@
 package org.example;
 
-public class Pedido {
+public class Pedido implements IPedido{
     private String descricao;
     private PedidoEstado pedidoEstado;
 

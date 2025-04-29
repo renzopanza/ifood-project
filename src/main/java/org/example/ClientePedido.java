@@ -21,7 +21,7 @@ public class ClientePedido extends Observable {
 
     public void atualizarEstadoPedido(){
         setChanged();
-        notifyObservers();
+        notifyObservers(pedido.getPedidoEstadoNome());
     }
 
     @Override

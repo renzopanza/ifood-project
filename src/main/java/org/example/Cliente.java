@@ -20,7 +20,7 @@ public class Cliente implements Observer {
     }
 
     @Override
-    public void update(Observable clientePedido, Object arg1) {
-        this.notificacao = this.nome + ", alteração de status do pedido para: " + clientePedido.toString();
+    public void update(Observable clientePedido, Object estadoPedido) {
+        this.notificacao = this.nome + ", alteração de status do pedido para: " + estadoPedido;
     }
 }
