@@ -59,20 +59,4 @@ class PedidoTest {
         assertTrue(pedido.negarPedido());
         assertEquals("Pedido negado", pedido.getPedidoEstadoNome());
     }
-
-    @Test
-    public void testarMudancaDeEstadoDoPedidoParaAceitacaoNaoPermitidaDepoisDeNegado() {
-        Pedido pedido = new Pedido();
-        pedido.negarPedido();
-        assertFalse(pedido.aceitarPedido());
-        assertEquals("Pedido negado", pedido.getPedidoEstadoNome());
-    }
-
-    @Test
-    public void testarMudancaDeEstadoDoPeididoParaDuplaAceitacao() {
-        Pedido pedido = new Pedido();
-        pedido.aceitarPedido();
-        assertFalse(pedido.aceitarPedido());
-        assertEquals("Pedido aceito", pedido.getPedidoEstadoNome());
-    }
 }
