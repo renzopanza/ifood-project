@@ -41,7 +41,7 @@ class ClientePedidoTest {
         pedido.prepararPedido();
         clientePedido.atualizarEstadoPedido();
 
-        assertEquals("Carlos, alteração de status do pedido para: Pedido em preparo", cliente.getNotificacao());
+        assertEquals("Carlos, alteração de status do pedido para: Pedido sendo preparado", cliente.getNotificacao());
     }
 
     @Test
@@ -66,9 +66,6 @@ class ClientePedidoTest {
         ClientePedido clientePedido = new ClientePedido(cliente, pedido);
         clientePedido.addObserver(cliente);
 
-        pedido.aceitarPedido();
-        pedido.prepararPedido();
-        pedido.enviarPedido();
         pedido.receberPedido();
         clientePedido.atualizarEstadoPedido();
 
