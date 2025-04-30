@@ -28,7 +28,7 @@ class PedidoTest {
     }
 
     @Test
-    public void testarMudancaDoEstadoDoPedidoDeParaEnviado() {
+    public void testarMudancaDoEstadoDoPedidoDeAceitoParaEnviado() {
         Pedido pedido = new Pedido();
         pedido.aceitarPedido();
         pedido.prepararPedido();
